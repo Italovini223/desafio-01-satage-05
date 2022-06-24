@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ :root {
+  font-size: 62.5%;
+  --ff-timer: 'Roboto', sans-serif;
+
+  --primary-color: hsl(240, 9%, 89%);
+  --secondary-color: hsl(194, 97%, 31%);
+
+  --primary-fill-color: hsl(240, 6%, 21%);
+  --secondary-fill-color: hsl(0, 0%, 100%);
+ }
+
+ .hide {
+  display: none;
+ }
+
+ body {
+  display: flex;
+  height: 100vh;
+
+  justify-content: space-evenly
+
+ }
+
+ main, footer {
+  align-self: center;
+ }
+
+ button {
+  border: none;
+  background: transparent;
+ }
+
+ .timer {
+  display: flex;
+  justify-content: center;
+
+ font-family: var(--ff-timer);
+ font-weight: 500;
+ font-size: clamp(10rem, 10rem + 10vw, 11rem);
+
+  width: clamp(30rem, 30rem + 30vw, 32rem);
+  margin-bottom: 5rem ;
+ }
+
+ .controls {
+  display: flex;
+  gap: 4rem;
+  width: clamp(30rem, 30rem + 10vw, 31rem);
+ }
+
+ .controls button {
+  cursor: pointer;
+ }
+
+ footer {
+  display: grid;
+  gap: 3.2rem;
+
+  grid-template-areas: "A B"
+  "C D";
+ }
+
+footer button:nth-child(1) {
+  grid-area: A;
+}
+footer button:nth-child(2) {
+  grid-area: B;
+}
+footer button:nth-child(3) {
+  grid-area: C;
+}
+footer button:nth-child(4) {
+  grid-area: D;
+}
+ footer button {
+  background: var(--primary-color);
+
+  width: clamp( 11rem, 12rem + 15vw, 13.8rem);
+  height: 15rem;
+
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+
+ }
+
+ footer button:focus {
+  background: var(--secondary-color);
+ }
+
+ footer button svg path {
+  fill: var(--primary-fill-color);
+ }
+
+
+ 
+ 
